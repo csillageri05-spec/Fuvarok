@@ -31,7 +31,7 @@ public class Fuvarok {
         for (int i = 0; i < fuvarok.size(); i++) {
             osszeg += fuvarok.get(i).getOsszeg();
         }
-        System.out.println("osszeg: ");
+        System.out.println("osszeg: " + osszeg);
     }
 
 }
