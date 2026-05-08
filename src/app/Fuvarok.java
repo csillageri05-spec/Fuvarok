@@ -27,6 +27,16 @@ public class Fuvarok {
             fuvarok.add(fuvar);
 
         }
+        Feladat1();
+        int max = 0;
+        for (int i = 0; i < fuvarok.size(); i++) {
+            if (fuvarok.get(i).getOsszeg()) {
+                
+            }
+        }
+    }
+
+    private static void Feladat1() {
         int osszeg = 0;
         for (int i = 0; i < fuvarok.size(); i++) {
             osszeg += fuvarok.get(i).getOsszeg();
