@@ -22,7 +22,7 @@ public class Fuvar {
         return ido;
     }
 
-    public int getOsszeg() {
+    public double getOsszeg() {
         return osszeg;
     }
 
