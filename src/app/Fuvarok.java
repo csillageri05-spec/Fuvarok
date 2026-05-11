@@ -4,8 +4,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 public class Fuvarok {
 
@@ -32,11 +34,32 @@ public class Fuvarok {
         Feladat2();
         Feladat3();
         Feladat4();
-        Feladat5();
+//        Feladat5();
         Feeladat6();
         Feladat7();
-    
+        Feladat8();
+
     }
+
+    private static void Feladat8() {
+        Map<String, Integer> statisztika = new HashMap<>();
+        for (Fuvar fuvar : fuvarok) {
+            String kulcs = fuvar.getRendszam();
+            if (statisztika.containsKey(kulcs)) {
+                int ertek = statisztika.get(kulcs);
+                statisztika.put(kulcs, ++ertek);
+            } else {
+                statisztika.put(kulcs, 1);
+            }
+        }
+        for (Map.Entry<String, Integer> entry : statisztika.entrySet()) {
+            String kulcs = entry.getKey();
+            Integer ertek = entry.getValue();
+            System.out.println("Auto: " + kulcs + " fuvarok: " + ertek);
+
+        }
+    }
+
     private static String Feladat7() {
         HashSet<String> db = new HashSet<>();
 
@@ -59,18 +82,15 @@ public class Fuvarok {
         return "Összes auto: " + db.size();
     }
 
-    private static String Feladat5() {
-        int i = 0;
-        while (i < fuvarok.size(){
-            i++;
-        }
-        return "Összes fizetési mód meghatározva....: " +
-
-    ... ;
-    }
-
-    
-
+//    private static String Feladat5() {
+//        int i = 0;
+//        while (i < fuvarok.size(){
+//            i++;
+//        }
+//        return "Összes fizetési mód meghatározva....: " +
+//
+//    ... ;
+//    }
     private static String Feladat4() {
         int db = 0;
         for (int i = 0; i < fuvarok.size(); i++) {
